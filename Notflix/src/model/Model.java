@@ -301,6 +301,7 @@ public class Model {
 	 */
 	public ArrayList<MovieRate> getMovieRates() {
 		ArrayList<Movie> movies = getMoviesWithRating();
+		movieRates.clear();
 		
 		for(Movie mov : movies) {
 			MovieRate movieRate = new MovieRate(mov, getAverageRatingOfMovie(mov));

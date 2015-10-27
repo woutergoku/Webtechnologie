@@ -1,4 +1,5 @@
 $(document).ready(function() {
+	localStorage.removeItem("Token");
 	console.log("[ready] - enter");
 });
 
@@ -12,7 +13,11 @@ function login() {
 		jsonValue = jQuery.parseJSON( jqXHR.responseText );
 		alert(jsonValue.Message);
 	}).done(function(data,status,xhr) {
-		alert("Token: " + xhr.getResponseHeader('Authorization'));
+		
+		if(typeof(Storage) !== "undefined") {
+		    localStorage.setItem("Token", xhr.getResponseHeader('Authorization'));
+		} else {
+		}
 	});
 	
 	return false;
