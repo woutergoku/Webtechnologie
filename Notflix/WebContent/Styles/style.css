@@ -33,3 +33,18 @@ div.movieInfo {
 #btnRegistreer {
 	float: right;
 }
+
+#form {
+	float: right;
+}
+
+#btnLogout {
+	margin-top: 7px;
+	margin-left: 5px;
+}
+
+#welcomeMessage {
+	float: left;
+    margin-top: 13px;
+    color: white;
+}
