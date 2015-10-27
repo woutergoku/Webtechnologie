@@ -11,14 +11,20 @@ $(document).ready(function () {
 			jsonValue = jQuery.parseJSON( jqXHR.responseText );
 			alert(jsonValue.Message);
 		}).done(function(data,status,xhr) {
+			var token = localStorage.getItem("Token")
+			console.log("[Statuscode] - " + xhr.status);
+			console.log("[Token] - " + token);
 			if(xhr.status == 200) {
-				$.each(data, function(index, element) {
-		            loadMovieHtml(element.movie.imdbTT, element.movie.title, element.movie.dateOfPublication, element.movie.lengthInMinutes, element.movie.director, element.movie.description, element.averageRating);
-		        });
-			} else if(xhr.status == 400) {
-				$("#movies").append("<p>U bent niet ingelogd</p>");
-			}
-			
+				if(token == null) {
+					console.log("[Token false] - enter");
+					$("#movies").append("<div class='alert alert-danger' role='alert'><strong>Error </strong>You are not logged in.</div>");
+				} else {
+					console.log("[Token true] - enter");
+					$.each(data, function(index, element) {
+			            loadMovieHtml(element.movie.imdbTT, element.movie.title, element.movie.dateOfPublication, element.movie.lengthInMinutes, element.movie.director, element.movie.description, element.averageRating);
+			        });
+				}
+			} 
 		});
 });
 

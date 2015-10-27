@@ -10,7 +10,13 @@ $(document).ready(function () {
 			$.each(data, function(index, element) {
 				loadUserHtml(element.firstName, element.insertion, element.lastName, element.nickName);
 			});
-		});
+	});
+	
+	$("#users .userArticle").each(function(index, elem) {
+	    elem.click( function() {
+	    	alert(this.val());
+	    });
+	});
 });
 
 function loadUserHtml(nickname){
