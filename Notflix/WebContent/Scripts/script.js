@@ -8,7 +8,7 @@ $(document).ready(function() {
 			$("#form").append("<button id='btnLogout' type='button' class='btn btn-danger'>Log Out</button><p id='welcomeMessage'>Welkom</p>");
 		} else {
 			console.log("[Storage False] - enter");
-			$("#form").append("<form class='navbar-form navbar-right' id='loginForm' onsubmit='login(); return false;' role='login' method='post'><div class='form-group'><input type='text' class='form-control' name='nickname' placeholder='Nickname'></div><div class='form-group'><input type='password' class='form-control' name='password' placeholder='Password'></div><button type='submit' id='btnLogin' class='btn btn-success'>Login</button></form><a id='registreer' href='registreer.html'>registreer</a>");
+			$("#form").append("<form class='navbar-form navbar-right' id='loginForm' onsubmit='login();  return false;' role='login' method='post'><div class='form-group'><input type='text' class='form-control' name='nickname' placeholder='Nickname'></div><div class='form-group'><input type='password' class='form-control' name='password' placeholder='Password'></div><button type='submit' id='btnLogin' class='btn btn-success'>Login</button></form><a id='registreer' href='registreer.html'>registreer</a>");
 		}
 	} else {
 	}
@@ -16,6 +16,8 @@ $(document).ready(function() {
 	$("#btnLogout").click(function() {
 		console.log("[Logout Click] - enter");
 		localStorage.removeItem("Token");
+		
+		location.reload();
 	});
 });
 
@@ -36,7 +38,9 @@ function login() {
 		}
 	});
 	
-	//return false;
+	location.reload();
+	
+	return false;
 }
 
 function registreer() {
