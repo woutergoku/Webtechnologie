@@ -13,8 +13,8 @@ $(document).ready(function () {
 		});
 });
 
-function loadUserHtml(firstname, insertion, lastname, nickname){
-	var html = "<div class='userArticle'><div class='userInfo'><table><tr><td>Firstname</td><td>" + firstname + "</td></tr><tr><td>Insertion</td><td>" + insertion + "</td></tr><tr><td>Lastname</td><td>" + lastname + "</td></tr><tr><td>Nickname</td><td>" + nickname + "</td></tr></table></div></div>"
+function loadUserHtml(nickname){
+	var html = "<p>Nickname: " + nickname + "</p>"
 	
 	$("#users").append(html);
 }

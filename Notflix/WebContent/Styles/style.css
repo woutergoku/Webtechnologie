@@ -11,7 +11,7 @@ div.vertical-line{
 	width: 14%;
 }
 
-.movieArticle, .userArticle {
+.movieArticle {
 	float:left;
 	margin-bottom: 5px;
 	border: 1px solid black;
