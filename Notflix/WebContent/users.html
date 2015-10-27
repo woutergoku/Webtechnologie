@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="Styles/style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-    <script src="Scripts/script.js"></script>
+    <script src="Scripts/users.js"></script>
   </head>
   <body>
       <nav class="navbar navbar-inverse">
@@ -39,33 +39,34 @@
                     <button type="submit" id="btnLogin" class="btn btn-success">Login</button>
             </form>
                 <a id="registreer" href="registreer.html">registreer</a>
+                
           </div><!--/.nav-collapse -->
         </div>
       </nav>
       
-    <div class="container" id="registreerContainer">
-	    <div class="panel panel-warning">
-          <div class="panel-heading">
-            <h3 class="panel-title">Registreer</h3>
-          </div>
-          <div class="panel-body">
-             <form id="registreerForm" onsubmit="registreer(); return false;" role="registreer" method="post">
- 				<div class="form-group">
-					<p>Firstname:<p>
-					<input type="text" class="form-control" name="firstname">
-					<p>Insertion:</p>
-					<input type="text" class="form-control" name="insertion">
-					<p>Lastname:</p>
-					<input type="text" class="form-control" name="lastname">
-					<p>Nickname:</p>
-					<input type="text" class="form-control" name="nickname">
-					<p>Password:</p>
-					<input type="password" class="form-control" name="password">
- 				</div>
- 				<button type="submit" id="btnRegistreer" class="btn btn-success">Registreer</button>
-  			</form>
-          </div>
-	    </div>
+    <div class="container" id="users">
+    	<div class='userArticle'>
+    	 	<div class='userInfo'>
+    	 		<table>
+    	 			<tr>
+    	 				<td>Firstname</td>
+    	 				<td>Jan</td>
+    	 			</tr>
+    	 			<tr>
+    	 				<td>Insertion</td>
+    	 				<td></td>
+    	 			</tr>
+    	 			<tr>
+    	 				<td>Lastname</td>
+    	 				<td>Jansen</td>
+    	 			</tr>
+    	 			<tr>
+    	 				<td>Nickname</td>
+    	 				<td>JJansen</td>
+    	 			</tr>
+    	 		</table>
+    	 	</div>
+    	 </div>
     </div>
   </body>
 </html>
