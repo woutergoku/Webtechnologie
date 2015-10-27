@@ -1,0 +1,35 @@
+div.vertical-line{
+  	width: 1px;
+  	background-color: black;
+  	height: 90%;
+  	float: left;
+}
+
+.movieArticle img {
+	float:left;
+	margin-right: 5px;
+	width: 12%;
+}
+
+.movieArticle {
+	float:left;
+	margin-bottom: 5px;
+	border: 1px solid black;
+}
+
+div.movieInfo {
+	float:left;
+}
+
+.movieInfo {
+	margin-left: 10px;
+}
+
+#registreer {
+	float: right;
+    margin-top: 13px;
+}
+
+#btnRegistreer {
+	float: right;
+}
