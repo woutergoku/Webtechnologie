@@ -8,19 +8,19 @@ $(document).ready(function () {
 			alert(jsonValue.Message);
 		}).done(function(data,status,xhr) {
 			$.each(data, function(index, element) {
-				loadUserHtml(element.firstName, element.insertion, element.lastName, element.nickName);
+				loadUserHtml(element.nickName, element.firstName, element.lastName, element.insertion);
 			});
 	});
 	
-	$("#users .userArticle").each(function(index, elem) {
-	    elem.click( function() {
-	    	alert(this.val());
-	    });
-	});
+	$("#accordion").accordion({
+		active: false,
+		collapsible: true
+    });
 });
 
-function loadUserHtml(nickname){
-	var html = "<p id='nicknameParagraph'>Nickname: " + nickname + "</p>"
+function loadUserHtml(nickname, firstname, lastname, insertion){
+	var html = "<h3 id='headerAcc'>" + nickname + "</h3><div><table><tr><td>Firstname: </td><td>"+ firstname +"</td></tr><tr><td>Insertion: </td><td>"+ insertion +"</td></tr><tr><td>Lastname: </td><td>"+ lastname +"</td></tr></table></div>";
 	
-	$("#users").append(html);
+	$("#accordion").append(html);
+	$("#accordion").accordion("refresh");
 }
