@@ -14,7 +14,7 @@ $(document).ready(function () {
 });
 
 function loadUserHtml(nickname){
-	var html = "<p>Nickname: " + nickname + "</p>"
+	var html = "<p id='nicknameParagraph'>Nickname: " + nickname + "</p>"
 	
 	$("#users").append(html);
 }
