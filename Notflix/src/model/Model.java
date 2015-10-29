@@ -33,8 +33,10 @@ public class Model {
 	public ArrayList<Rating> getRatings(String token) {
 		ArrayList<Rating> ownRatings = new ArrayList<Rating>();
 		
+		String username = getUsernameFromToken(token);
+		
 		for(Rating rating : ratings) {
-			if(rating.getNickname().equals(getUsernameFromToken(token))) {
+			if(rating.getNickname().equals(username)) {
 				ownRatings.add(rating);
 			}
 		}
