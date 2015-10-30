@@ -12,9 +12,10 @@ div.vertical-line{
 }
 
 .movieArticle {
-	float:left;
-	margin-bottom: 5px;
-	border: 1px solid black;
+	float: left;
+    margin-bottom: 25px;
+    border: 1px solid black;
+    width: 75%;
 }
 
 div.movieInfo {

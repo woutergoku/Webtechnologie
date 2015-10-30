@@ -88,4 +88,6 @@ function addRate() {
             alert("Succesfully rated the movie");
         });
 	});
+	
+	location.reload();
 }

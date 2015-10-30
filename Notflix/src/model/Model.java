@@ -132,6 +132,9 @@ public class Model {
 		Movie mov6 = new Movie(6, 6, "Harry Potter en de Halfbloed Prins", "15-07-2009", 153, "Daniel Radcliffe", "Drama / Fantasie / Avontuur");
 		Movie mov7 = new Movie(7, 7, "Harry Potter en de Relieken van de Dood deel 1", "17-11-2010", 147, "Daniel Radcliffe", "Fantasie / Avontuur");
 		Movie mov8 = new Movie(8, 8, "Harry Potter en de Relieken van de Dood deel 2", "13-07-2011", 130, "Daniel Radcliffe", "Fantasie / Avontuur");
+		Movie mov9 = new Movie(9, 9, "Spy", "05-06-2015", 119, "Paul Feig", "Comedie / Actie");
+		Movie mov10 = new Movie(10, 10, "Fifty Shades of Grey", "13-02-2015", 125, "Sam Taylor-Johnson", "Drama");
+		Movie mov11 = new Movie(11, 11, "Jupiter Ascending", "06-02-2015", 127, "Andy Wachowski, Lana Wachowski", "Science-Fiction");
 		
 		movies.add(mov1);
 		movies.add(mov2);
@@ -141,6 +144,9 @@ public class Model {
 		movies.add(mov6);
 		movies.add(mov7);
 		movies.add(mov8);
+		movies.add(mov9);
+		movies.add(mov10);
+		movies.add(mov11);
 	}
 	
 	/**
