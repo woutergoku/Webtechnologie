@@ -124,17 +124,23 @@ public class Model {
 	 * Initiliazes some Movies into the Model.
 	 */
 	public void initMovies() {
-		Movie mov1 = new Movie(5, 5, "The-Intern", "23-09-2015", 125, "Robert De Niro", "Actie film");
-		Movie mov2 = new Movie(1, 1, "The Extern", "03-09-2015", 98, "Robert De Niro", "Comedy");
-		Movie mov3 = new Movie(2, 2, "The Uptern", "07-06-2015", 78, "Robert De Niro", "Sci-Fi film");
-		Movie mov4 = new Movie(3, 3, "The Downtern", "15-09-2015", 155, "Robert De Niro", "Thriller film");
-		Movie mov5 = new Movie(4, 4, "The Tern", "17-03-2015", 188, "Robert De Niro", "Kinder film");
+		Movie mov1 = new Movie(1, 1, "Harry Potter en de Steen der Wijzen", "16-11-2001", 152, "Daniel Radcliffe", "Fantasie");
+		Movie mov2 = new Movie(2, 2, "Harry Potter en de Geheime Kamer", "13-11-2002", 161, "Daniel Radcliffe", "Fantasie");
+		Movie mov3 = new Movie(3, 3, "Harry Potter en de Gevangene van Azkaban", "31-05-2004", 142, "Daniel Radcliffe", "Fantasie");
+		Movie mov4 = new Movie(4, 4, "Harry Potter en de Vuurbeker", "18-11-2005", 157, "Daniel Radcliffe", "Fantasie");
+		Movie mov5 = new Movie(5, 5, "Harry Potter en de Orde van de Feniks", "13-07-2007", 138, "Daniel Radcliffe", "Fantasie");
+		Movie mov6 = new Movie(6, 6, "Harry Potter en de Halfbloed Prins", "15-07-2009", 153, "Daniel Radcliffe", "Drama / Fantasie / Avontuur");
+		Movie mov7 = new Movie(7, 7, "Harry Potter en de Relieken van de Dood deel 1", "17-11-2010", 147, "Daniel Radcliffe", "Fantasie / Avontuur");
+		Movie mov8 = new Movie(8, 8, "Harry Potter en de Relieken van de Dood deel 2", "13-07-2011", 130, "Daniel Radcliffe", "Fantasie / Avontuur");
 		
 		movies.add(mov1);
 		movies.add(mov2);
 		movies.add(mov3);
 		movies.add(mov4);
 		movies.add(mov5);
+		movies.add(mov6);
+		movies.add(mov7);
+		movies.add(mov8);
 	}
 	
 	/**
