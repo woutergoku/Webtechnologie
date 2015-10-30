@@ -8,7 +8,7 @@ $(document).ready(function() {
 			$("#form").append("<button id='btnLogout' type='button' class='btn btn-danger'>Log Out</button><p id='welcomeMessage'>Welkom</p>");
 		} else {
 			console.log("[Storage False] - enter");
-			$("#form").append("<form class='navbar-form navbar-right' id='loginForm' onsubmit='login(); return false;' role='login' method='post'><div class='form-group'><input type='text' class='form-control' name='nickname' placeholder='Nickname'></div><div class='form-group'><input type='password' class='form-control' name='password' placeholder='Password'></div><button type='submit' id='btnLogin' class='btn btn-success'>Login</button></form><a id='registreer' href='registreer.html'>registreer</a>");
+			$("#form").append("<form class='navbar-form navbar-right' id='loginForm' role='login' method='post'><div class='form-group'><input id='loginNickname' type='text' class='form-control' name='nickname' placeholder='Nickname'></div><div class='form-group'><input id='loginPassword' type='password' class='form-control' name='password' placeholder='Password'></div><button type='submit' id='btnLogin' class='btn btn-success'>Login</button></form><a id='registreer' href='registreer.html'>registreer</a>");
 		}
 	} else {
 	}
@@ -22,27 +22,30 @@ $(document).ready(function() {
 		localStorage.removeItem("Token");
 		location.reload();
 	});
+	
+	$("#loginForm").submit(function() {
+		login();
+	});
 });
 
 function login() { 
 	console.log("[login] - enter");
+	var loginData = "nickname=" + $("#loginNickname").val() + "&password=" + $("#loginPassword").val();
+	console.log(loginData);
 	$.ajax({
 		url:'api/users/login',
 		type: 'POST',
-		data: $("#loginForm").serialize()
+		data: loginData
 	}).fail(function(jqXHR, textStatus) {
 		alert("Failed");
 	}).done(function(data,status,xhr) {
-		alert("done");
 		if(typeof(Storage) !== "undefined") {
 		    localStorage.setItem("Token", xhr.getResponseHeader('Authorization'));
 		} else {
 		}
 	});
 	
-	//location.reload();
-	
-	return false;
+	location.reload();
 }
 
 function registreer() {
@@ -66,10 +69,7 @@ function registreer() {
 }
 
 function addRate() {
-	console.log("[addRate] - enter");
-	
-	alert($("#movieRateSelect").val());
-	
+	console.log("[addRate] - enter");	
 	var rateData = "movieid="+ $("#movieRateSelect").val() + "&rating=" + $("#movieRating").val();
 	
 	$.ajax({
@@ -85,7 +85,7 @@ function addRate() {
 		alert("fail");
 	}).done(function(data,status,xhr) {
 		$.each(data, function(index, element) {
-            alert("Added the rate " + element + "to movie " + element + "as user " + element);
+            alert("Succesfully rated the movie");
         });
 	});
 }
